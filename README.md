@@ -1,39 +1,39 @@
 # HomeAI 🏠🤖
 
-Bienvenido al proyecto modular que integra diferentes componentes, incluyendo aplicación, inteligencia artificial (AI), Internet de las cosas (IOT), y mecatrónica. Cada módulo tiene sus propias características y objetivos. A continuación se describen las partes del proyecto y las tareas relacionadas.
+Bienvenido al proyecto modular que integra diferentes componentes, incluyendo aplicación, inteligencia artificial (IA), Internet de las cosas (IoT) y mecatrónica. Cada módulo tiene sus propias características y objetivos. A continuación se describen las partes del proyecto y las tareas relacionadas.
+
+---
 
 ## Módulo Aplicación
-El módulo de aplicación es el front-end del proyecto. Su objetivo es proporcionar una interfaz de usuario amigable y funcional para interactuar con los otros módulos. Esto incluye la creación de páginas web, aplicaciones móviles o cualquier otro tipo de interfaz para el usuario final.
+Esta parte gráfica para el usuario tendrá la funcionalidad de poder editar los nombres de los activadores, cada uno con sus respectivos ID. Además, debe tener la capacidad de grabar audios manteniendo presionada la pantalla y terminar la grabación cuando se deje de presionar. Luego, debe enviar el archivo de audio hacia la API implementada por el `Módulo AI`.
 
-### Lista de Tareas del Módulo Aplicación
-- [ ] Crear diseño de interfaz de usuario
-- [ ] Desarrollar la funcionalidad básica
-- [ ] Conectar con el módulo AI para obtener datos
-- [ ] Implementar pruebas de usuario
+### Lista de tareas del Módulo Aplicación
+- [ ] Interfaz gráfica
+- [ ] Funcionalidad para editar los nombres de los activadores
+- [ ] Funcionalidad para grabar audio
+- [ ] Enviar audio a través de la API
 
 ## Módulo AI
-El módulo de inteligencia artificial se encarga del análisis de datos y la toma de decisiones automatizada. Puede utilizar técnicas de aprendizaje automático y otros métodos de inteligencia artificial para procesar datos y proporcionar resultados útiles al proyecto.
+Este módulo se encargará de la implementación de la API para procesar el audio y convertirlo en texto. Luego, usará un modelo de lenguaje grande (LLM) para generar el archivo `JSON` que contendrá las instrucciones para los activadores. Finalmente, se encargará de enviar el archivo usando el `Módulo IoT`, que se encarga de la conexión entre los dispositivos y el servidor.
 
-### Lista de Tareas del Módulo AI
-- [ ] Desarrollar modelos de aprendizaje automático
-- [ ] Entrenar modelos con datos relevantes
-- [ ] Integrar con el módulo Aplicación
-- [ ] Realizar pruebas y ajustar modelos
+### Lista de tareas del Módulo AI
+- [ ] Implementar la API para procesar el audio
+- [ ] Diseñar el prompt
+- [ ] Funcionalidad para enviar las instrucciones al servidor del `Módulo IoT`
 
-## Módulo IOT
-El módulo de Internet de las cosas (IOT) se encarga de la comunicación y conexión con dispositivos físicos. Esto incluye sensores, actuadores y otros dispositivos conectados a Internet.
+## Módulo IoT
+Este módulo debe implementar la conexión entre los dispositivos IoT y el servidor. Debe tener la funcionalidad para que, una vez reciba las instrucciones del `Módulo AI`, se ejecuten los activadores según las instrucciones.
 
-### Lista de Tareas del Módulo IOT
-- [ ] Configurar dispositivos IOT
-- [ ] Establecer comunicación con el módulo Aplicación
-- [ ] Implementar funciones de control remoto
-- [ ] Monitorizar y recopilar datos de dispositivos
+### Lista de tareas del Módulo IoT
+- [ ] Configurar dispositivos IoT
+- [ ] Establecer comunicación con los dispositivos
+- [ ] Funcionalidad para recibir el archivo `JSON` en el servidor
+- [ ] Ejecutar las instrucciones en los activadores
 
 ## Módulo Mecatrónica
-El módulo de mecatrónica se centra en los sistemas físicos y mecánicos, y su interacción con el software. Puede incluir robots, dispositivos automatizados y otros componentes mecatrónicos.
+Este módulo se encarga del diseño de los activadores y de la comunicación con el `Módulo IoT`.
 
-### Lista de Tareas del Módulo Mecatrónica
-- [ ] Diseñar sistemas mecánicos
-- [ ] Integrar con el módulo IOT para control remoto
-- [ ] Desarrollar software de control
+### Lista de tareas del Módulo Mecatrónica
+- [ ] Diseñar los activadores
+- [ ] Establecer comunicación con el servidor del `Módulo IoT`
 - [ ] Realizar pruebas de funcionamiento
