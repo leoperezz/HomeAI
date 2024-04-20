@@ -33,5 +33,6 @@ Este módulo se encarga del diseño de los activadores y de la comunicación con
 - [ ] Diseñar los activadores
 - [ ] Establecer comunicación con el servidor del `Módulo IoT`
 - [ ] Realizar pruebas de funcionamiento
+---
 
 ![Diagrama de los modulos de HomeAI](HomeAIDiagrama.png)
